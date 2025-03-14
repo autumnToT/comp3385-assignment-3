@@ -4,7 +4,7 @@
 @section('content')
 	<div class="container mt-5">
 		<h1 class="mb-4">Create Client</h1>
-		<form method="post" action="{{route('store')}}" enctype="multipart/form-data" class="border p-4 rounded shadow">
+		<form method="post" action="{{ route('store') }}" enctype="multipart/form-data" class="border p-4 rounded shadow">
 			@csrf
 			<div class="mb-3">
 				<label for="name">Name:</label>

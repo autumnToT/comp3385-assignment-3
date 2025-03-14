@@ -22,6 +22,21 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/about') }}">About</a>
                 </li>
+				<li class="nav-item">
+                    <a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a>
+                </li>
+				@auth
+					<li class="nav-item">
+						<form method="post" action="{{ route('logout') }}" class="d-inline">
+							@csrf
+							<button type="submit" class="btn btn-link ms-2" onclick="return confirm('Are you sure you want to log out?')">Logout</button>
+						</form>
+					</li>
+				@else
+					<li class="nav-item">
+						<a class="nav-link" href="{{ route('login') }}">Login</a>
+					</li>
+				@endauth
             </ul>
         </div>
     </div>
