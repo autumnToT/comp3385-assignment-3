@@ -10,7 +10,7 @@ class AuthController extends Controller
     //the two methods
 	public function create(){
 		//get the form for login
-		return view('login-form');
+		return view('login');
 	}
 	public function store(Request $request){
 		//get the user info to check if correct or not
