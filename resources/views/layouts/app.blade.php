@@ -25,7 +25,7 @@
 				<li class="nav-item">
                     <a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a>
                 </li>
-				@auth
+				@if(Auth::check())
 					<li class="nav-item">
 						<form method="post" action="{{ route('logout') }}" class="d-inline">
 							@csrf
@@ -36,7 +36,7 @@
 					<li class="nav-item">
 						<a class="nav-link" href="{{ route('login') }}">Login</a>
 					</li>
-				@endauth
+				@endif
             </ul>
         </div>
     </div>
